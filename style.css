@@ -1,0 +1,100 @@
+/* Make page layout take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main content takes remaining space */
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 20px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* Dark mode styles */
+  body.dark {
+    background: #121212;
+    color: #fff;
+  }
+  
+  body.dark .container {
+    background: #1e1e1e;
+    color: #fff;
+  }
+  
+  /* Controls for pen and background */
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  /* Signature canvas */
+  canvas {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    cursor: crosshair;
+  }
+  
+  /* Buttons below canvas */
+  .buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 8px 16px;
+    border: none;
+    background: #2196F3;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  button:hover {
+    background: #1769aa;
+  }
+  
+  /* Signature preview */
+  #signature-image {
+    margin-top: 20px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    display: none;
+  }
+  
+  /* Footer at the bottom */
+  .footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #08a945;
+  }
+  
+  body.dark .footer {
+    color: #aaa;
+  }
+  

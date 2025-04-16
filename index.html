@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Advanced Quick Sign</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Quick Signature Pad ✍️</h2>
+
+    <div class="controls">
+      <label>
+        <input type="checkbox" id="toggle-theme" />
+        🌙 Dark Mode
+      </label>
+
+      <label>
+        Background:
+        <input type="color" id="bgColor" value="#ffffff" />
+      </label>
+
+      <label>
+        Pen Color:
+        <input type="color" id="penColor" value="#000000" />
+      </label>
+
+      <label>
+        Font Size:
+        <input type="range" id="fontSize" min="1" max="10" value="2" />
+        <span id="fontSizeValue">2</span>px
+      </label>
+    </div>
+
+    <canvas id="signature-pad" width="400" height="200"></canvas>
+
+    <div class="buttons">
+      <button id="clear">🧹 Clear</button>
+      <button id="restore">↩️ Restore</button>
+      <button id="save">💾 Save</button>
+      <button id="download">⬇️ Download</button>
+    </div>
+
+    <img id="signature-image" alt="Your Signature" />
+  </div>
+  <footer class="footer">
+    &copy; 2025 Deepak Rao. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
